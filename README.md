@@ -8,10 +8,7 @@ Alternatively, feel free to keep your journey fully on-chain and interact with t
 ### Web3 Bazaar 
 
 
-<p align="center">
-  <img src="[your_relative_path_here](https://raw.githubusercontent.com/Web3bazaar/smartcontract-testV2/master/assets/trades-image.png)" width="350" title="hover text">
-  <img src="[your_relative_path_here_number_2_large_name](https://raw.githubusercontent.com/Web3bazaar/smartcontract-testV2/master/assets/trades-image.png)" width="350" alt="accessibility text">
-</p>
+![this screenshot](/assets/trades-image.png)
 
 ## startTrade
 
