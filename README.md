@@ -9,7 +9,6 @@ Alternatively, feel free to keep your journey fully on-chain and interact with t
 
 
 ![this screenshot](/assets/trades-image.png)
-|:--:|
 | <b>Image Credits - Fig.2 - 4K Mountains Wallpaper</b>|
 
 ## startTrade
