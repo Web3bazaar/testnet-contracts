@@ -5,22 +5,19 @@ Now that your wallet is funded with testnet assets, you can create and execute t
 
 Alternatively, feel free to keep your journey fully on-chain and interact with the Bazaar smart contract directly by following the steps below.
 
+### Web3 Bazaar 
 
-### 4 - Approve Bazaar smart contract transactions
-Still in the assets smart contracts execute method `approve`  or `setAprroveForAll` to allow the Bazaar contract to receive your assets using the following parameters:
-<br>
-### ERC-20 contract
 
-| Parameter    | Input  |
-| ---      | ---       |
-| spender    | 0x670bc34b16e0994fd64D90F127fDe38c0f1Afb83|
-| amount      | 400000000000000000000000|
+<p align="center">
+  <img src="[your_relative_path_here](https://raw.githubusercontent.com/Web3bazaar/smartcontract-testV2/master/assets/trades-image.png)" width="350" title="hover text">
+  <img src="[your_relative_path_here_number_2_large_name](https://raw.githubusercontent.com/Web3bazaar/smartcontract-testV2/master/assets/trades-image.png)" width="350" alt="accessibility text">
+</p>
 
-### ERC-721 and ERC-1155 contract
+## startTrade
 
-| Parameter    | Input  |
-| ---      | ---       |
-| spender    | 0x670bc34b16e0994fd64D90F127fDe38c0f1Afb83|
+## executeTrade
+
+
 
 
 ### 5 - Create a trade in the Bazaar
@@ -57,7 +54,6 @@ Execute this method in behalf of both parties' wallets in order to deposit the a
 
 | Parameter     | Input |
 | ---      | ---       |
-| creatorWalletAdd  | creator wallet address|
 | tradeId  | Input value returned by `startTrade` method|
 
 >Note: When role-playing as the counterparty you can call this method without providing a wallet address. 
