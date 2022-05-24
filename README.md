@@ -9,18 +9,10 @@ Alternatively, feel free to keep your journey fully on-chain and interact with t
 
 
 ![this screenshot](/assets/trades-image.png)
-| <b>Image Credits - Fig.2 - 4K Mountains Wallpaper</b>|
 
 ## startTrade
 
-## executeTrade
-
-
-
-
-### 5 - Create a trade in the Bazaar
-
-Go to the [Bazaar smart contract](https://mumbai.polygonscan.com/address/0x3ca48686212af897019a8e89140e64e8f2cc2f30) and on the `write` tab execute the following methods to complete a full P2P trade
+Start trade method needs to be called by the creator he sends the tokens we want to trade from their side it could be a list of assets of any type of asset's ERC20 ERC721 and ERC1155, and also send the list of asset's they want to get from the executer side also in a form of a list of tokens in any type. 
 
 - `startTrade` method
 
@@ -40,6 +32,17 @@ Execute this method by providing the following parameters' data with the trade t
 | executorTokenType[]      | "1" for native token, "2" for ERC-20, "3" for ERC-721 or "4" for ERC-1155|
 
 >Note: Once this method is called, the smart contract will return a unique `tradeId` value that will be used by the methods below in order to limit the operations to the designtaed parties and assets.
+
+## executeTrade
+
+
+
+
+### 5 - Create a trade in the Bazaar
+
+Go to the [Bazaar smart contract](https://mumbai.polygonscan.com/address/0x3ca48686212af897019a8e89140e64e8f2cc2f30) and on the `write` tab execute the following methods to complete a full P2P trade
+
+
 
 
 
