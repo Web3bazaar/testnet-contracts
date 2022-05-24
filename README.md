@@ -5,14 +5,20 @@ Now that your wallet is funded with testnet assets, you can create and execute t
 
 Alternatively, feel free to keep your journey fully on-chain and interact with the Bazaar smart contract directly by following the steps below.
 
-### Web3 Bazaar 
+### Web3 Bazaar
+
+![this screenshot](/assets/trade_flow.png)
 
 
-![this screenshot](/assets/trades-image.png)
+
 
 ## startTrade
 
 Start trade method needs to be called by the creator he sends the tokens we want to trade from their side it could be a list of assets of any type of asset's ERC20 ERC721 and ERC1155, and also send the list of asset's they want to get from the executer side also in a form of a list of tokens in any type. 
+
+Smart contract stores the information about that trade as the following picture describes
+
+![this screenshot](/assets/trades-image.png)
 
 - `startTrade` method
 
