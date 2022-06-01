@@ -1,9 +1,18 @@
 # Web3 Bazaar contract
 
 
-Now that your wallet is funded with testnet assets, you can create and execute trades from the [Bazaar dApp](https://web3bazaar.org) to help us improve the UX or spot eventual bugs in the interface <br>
 
-Alternatively, feel free to keep your journey fully on-chain and interact with the Bazaar smart contract directly by following the steps below.
+Web3 Bazaar its a escrow contract an escrow usually its an instrument whereby an asset or escrow money is held by a third party on behalf of two other parties that are in the process of completing a transaction. Web3Bazaar in that sense aren't held the assets on behalf of the parties, web3Bazaar its a non-custodial contract which means asset's pass from one part to other when the conditions of the trade are met.
+
+In Web3Bazaar the goal is move web3 assets ownership from two web3 users, one part wants to give a set of web3 assets(ERC20, ERC721, ERC1155) 
+and pretend to receives back other another set of web3 assets. The quantity and price estimation about the two swappble sets of itens needs to be agreed between two parties offchain.
+
+Once the trade had been created by the first part (creator) where he supply all the items we want to give and receive once the trade is completed
+
+blabla
+
+fig.1 (state)
+
 
 ### Web3 Bazaar
 
