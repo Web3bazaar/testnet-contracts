@@ -28,7 +28,7 @@ A Trade in the Bazaar can only have 3 status:
 First, the trade must be submitted by the first counterpart (creator). Creator provides the trade terms and smart contract addresses of the assets both parties should commit to the trade. 
 It proceeeds to  perform validations to confirm if all the parameters of the trade are valid. Contract checks if all the assets belong to the wallet addresses provided and if the creator gave the necessary permissions for the Bazaar smart contract to perform this asset exchange. The code detects if some issue occurs and throws an error code to the user as describbed in the ERROR LIST at the end of this Readme. 
 
-The contract then stores all the trade terms and data internally as shown in the picture below:
+The contract then internally stores all the trade terms and assets' data depicted below:
 
 ![Fig.1](/assets/trades-image.png)
 
