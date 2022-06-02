@@ -15,7 +15,13 @@ When trades are created on the blockchain there are only 3 possible status for t
 
 ## Steps for the trade 
 
-First, trade must be created by the first part (creator) where he fills the items we wants to give and receive back once the trade is completed. As agreed with the other user. Before the transaction is accepted by the web3Bazaar contract the code will perform validations in order to check if all the paramertes of the trade are valid.
+### Start trade
+
+First the trade must be created by the first part (creator) where he fills the items we wants to give and receive back once the trade is completed. As agreed with the other user. Before the transaction is accepted by the web3Bazaar contract the code will perform validations whereby verifies if all the paramertes of the trade are valid. Contract check if all the web3 assets intended to be used in the exchange belong to the users involved in this exchange and if the user who are creating the trade gave the necessary permissions for web3bazaar contract to perform this asset exchange. The code detects if some issue occur and thow a error code to the user. Check below all the errors on that error table.
+
+### Execute trade
+
+
 
 
 
