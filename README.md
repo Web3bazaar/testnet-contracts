@@ -2,7 +2,7 @@
 
 ## About this repo
 
-Thisrepo contains the solidity code used in the Bazaar test smart contract hosted on the Mumbai test network.
+This repo contains the solidity code used in the Bazaar test smart contract hosted on the Mumbai test network.
 
 ## About the Smart contract
 
