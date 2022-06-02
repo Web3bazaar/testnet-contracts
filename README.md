@@ -1,4 +1,4 @@
-# Web3 Bazaar 
+# Web3 Bazaar Test Smart Contract V2
 
 ## About this repo
 
