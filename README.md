@@ -1,44 +1,39 @@
 # Web3 Bazaar 
 
+## About this repo
 
-Web3 Bazaar its a escrow contract an escrow usually its an instrument whereby an asset or escrow money is held by a third party on behalf of two other parties that are in the process of completing a transaction. Web3Bazaar in that sense aren't held the assets on behalf of the parties, web3Bazaar its a non-custodial contract which means asset's pass from one part to other when the conditions are met.
+Thisrepo contains the solidity code used in the Bazaar test smart contract hosted on the Mumbai test network.
 
-In Web3Bazaar the goal is move web3 assets ownership from two web3 users, one part wants to give a set of web3 assets(ERC20, ERC721, ERC1155) 
-and intends to receives back other set of web3 assets. The quantity and price estimation about the two "exchabgable" sets of itens needs to be agreed between two parties before the trade as been setup, this process its outside the scope for this project. They need to know each other and change at least your wallet address.
+## About the Smart contract
 
-When trades are created on the blockchain there is only 3 possible status for that trade. Created, Completed, and Cancelled. Created status is the status after the first user creates the trade, then both users could cancel the trade if one or the other decides that it no longer makes sense. when one of the users cancels the transaction it is removed from the list of active transactions. Completed status is when the second user (executer) executes the trade and accepts to trigger trade then we consider that the trade is finished and no longer available on the list of trades.
+The Web3 Bazaar dApp is supported by a non-custodial escrow contract that enables peer-to-peer swaps of ERC-20, ERC-721 or ERC-1155 tokens.
+The contract only purpose is to switch asset ownership from one wallet address to another. 
+
+Trade terms must be defined between parties before being submitted into the contract.
+A Trade in the Bazaar can only have 3 status:
+| Status    | Description |
+| ---          | ---        |
+| Created | Terms are established in the Bazaar and ready to be executed by the counter-party. both parties can also change the status to "Cancelled"|
+| Completed     | Counter-party executed the trade and assets swapped hands. The trade is now in a status that can't be accessed or trigerred anymore |
+| Cancelled      | One of both parties cancelled the trade and it can't be accessed or trigerred anymore |
 
 
 ![this screenshot](/assets/trade_status.png)
 
 
+## Smart contract Methods
 
-## Steps to exchange assets
+## 1.Start trade
 
-### Start trade
+First, the trade must be submitted by the first counterpart (creator). Creator provides the trade terms and smart contract addresses of the assets both parties should commit to the trade. 
+It proceeeds to  perform validations to confirm if all the parameters of the trade are valid. Contract checks if all the assets belong to the wallet addresses provided and if the creator gave the necessary permissions for the Bazaar smart contract to perform this asset exchange. The code detects if some issue occurs and throws an error code to the user as describbed in the ERROR LIST at the end of this Readme. 
 
-First, the trade must be created by the first part (creator) where he fills the items we want to give and receive back once the trade is completed. As agreed with the other user. Before the transaction is accepted by the web3Bazaar contract the code will perform validations which verifies if all the parameters of the trade are valid. Contract check if all the web3 assets intended to be used in the exchange belong to the users involved in this exchange and if the user who is creating the trade gave the necessary permissions for web3bazaar contract to perform this asset exchange. The code detects if some issue occurs and throws an error code to the user. 
-
-Internally contract stores the trade information status and assets the user's wallet address on the storage of the contract as shown in the below image.
+The contract then stores all the trade terms and data internally as shown in the picture below:
 
 ![Fig.1](/assets/trades-image.png)
 
-
-
-### Execute trade
-
-When a trade are in created status executer user needs to execute that trade in order to swap the assets from on part to other. It is then verified that the executer user has given the contract permissions to move its assets to the other user, and an ownership check of all items is performed again. 
-If everthing is verified by the contract then contract execute the swap between assets from one user to other and the trade is marked as Completed.
-
-![Fig.1](/assets/trade_flow.png)
-
-
 ### Method Description
 
-
-## startTrade
-
-Execute this method by providing the following parameters' data with the trade terms to open a trade in the contract:
 
 | Parameter    | Input  |
 | ---          | ---        |
@@ -55,19 +50,24 @@ Execute this method by providing the following parameters' data with the trade t
 
 >Note: Once this method is called, the smart contract will return a unique `tradeId` value that will be used by the methods below in order to limit the operations to the designtaed parties and assets.
 
-## executeTrade
+## 2.Execute trade
 
-The executer needs to execute the trade to complete swap between the assets. This operation swap's the assets from the creator to the executer wallet. 
+When a trade is submitted and enters `created` status, the counter-party becomes able to execute it. It must have approved the Bazzar contract permissions to move its assets. 
+A verification of the ownership of the assets provided in the trade terms is performed again before executing it.
+Upon succesful verification the contract executes the swap and changes the status of the trade to `Completed`
 
-- `executeTrade` method
+![Fig.1](/assets/trade_flow.png)
 
-Execute this method in behalf of both parties wallets in order to deposit the assets in the contract
+
+### Method Description
 
 | Parameter     | Input |
 | ---      | ---       |
 | tradeId  | Input value returned by `startTrade` method|
 
-## getTrade
+
+
+## 3.getTrade
 
 Get Trade methods gives information about the trade based on the tradeId and user wallet it returns asset's stored for that trade.
 
@@ -75,7 +75,6 @@ Get Trade methods gives information about the trade based on the tradeId and use
 | ---     |   ---        |
 | tradeId        |   tradeId            |
 | userWallet     |   user address       |
-
 
 
 ## Error List
@@ -94,5 +93,50 @@ Get Trade methods gives information about the trade based on the tradeId and use
 
 
 
+## How to test the Web3 Bazaar in Mumbai testnet
+
+
+>Note: Make sure to connect your wallet to Mumbai test network. There won't be any costs associated with any transaction or fees you'll be paying interacting with the contracts below
+
+### 0- Fund your wallet with native tokens
+
+Before you start minting tokens or interacting with Bazaar contract you'll need to fund your wallet with native tokens of te corresponding test network. You can use one of the faucets below:
+
+Testnet   | Explorers                     | Testnet Faucets
+:-------- |:----------------------------- |:-------------------------
+Mumbai    | https://mumbai.polygonscan.com/  | https://faucet.polygon.technology/
+
+<br />
+
+
+### 1 -Fund your wallet with tradeable assets
+Go to one of the smart contracts below and connect your wallet on the `connect to web3` button:
+
+| Asset type   | Network | Address | Opensea Collection |
+| ---      | ---       |  ---       |  ---       |
+| ERC-20      | Mumbai | [0x89A...6c41](https://mumbai.polygonscan.com/token/0x89A84dc58ABA7909818C471B2EbFBc94e6C96c41) | N/A |
+| ERC-20 V2   | Mumbai | [0xA2c...d60BA](https://mumbai.polygonscan.com/token/0xA2cCA397A605BD3164820D37f961c96A35fd60BA) | N/A | 
+| ERC-721     | Mumbai |[0x8ba..BD2B](https://mumbai.polygonscan.com/address/0x8ba96897cA8A95B39C639BEa1e5E9ce60d22BD2B#code) | [GO](https://testnets.opensea.io/collection/web3-bazaar-erc-721-test-collection) |
+| ERC-721 V2     | Mumbai |[0x51B..558B](https://mumbai.polygonscan.com/address/0x51B619dE76fc4FD32FE0571F8AD059d07f9f558B#code) | [GO](https://testnets.opensea.io/collection/web3-bazaar-erc-721-test-collection-v3) |
+| ERC-1155    | Mumbai | [0xc70...66f](https://mumbai.polygonscan.com/address/0xC70d6b33882dE18BDBD0a372B142aC96ceb1366f#code) | [GO](https://testnets.opensea.io/collection/web3-bazaar-erc-1155-test-collection-v3) |
+<br>
+
+Within the contract, go to the `write` tab and execute method `.mint`.<br>
+
+>Note:  In the ERC-20 contract you'll be asked to provide a value for the `payableAmount` parameter. This is the value in Matic that will be used to mint the token. Providing '0' as value will consume none of your test tokens and mint 10 units of the ERC-20 token
+
+### 2 - Repeat the first step with a different wallet
+
+If you want to complete the whole flow yourself you’ll need to fund another wallet with a different asset type and role-play as your counterparty.
+
+Or, you can invite friend and make your trades much funnier.
+
+
+
+### 3 - Create and execute trades in the Bazaar
+
+Now that your wallet is funded with testnet assets, you can create and execute trades from the [Bazaar dApp](https://web3bazaar.org) to help us improve the UX or spot eventual bugs in the interface 
+
+<b>Happy P2P trades frens<b>
 
 
