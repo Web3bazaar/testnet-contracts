@@ -4,9 +4,9 @@
 Web3 Bazaar its a escrow contract an escrow usually its an instrument whereby an asset or escrow money is held by a third party on behalf of two other parties that are in the process of completing a transaction. Web3Bazaar in that sense aren't held the assets on behalf of the parties, web3Bazaar its a non-custodial contract which means asset's pass from one part to other when the conditions are met.
 
 In Web3Bazaar the goal is move web3 assets ownership from two web3 users, one part wants to give a set of web3 assets(ERC20, ERC721, ERC1155) 
-and intends to receives back other set of web3 assets. The quantity and price estimation about the two "exchangebl"e sets of itens needs to be agreed between two parties before the trade as been setup, this process its outside the scope for this project. They need to know each other and change at least your wallet address.
+and intends to receives back other set of web3 assets. The quantity and price estimation about the two "exchabgable" sets of itens needs to be agreed between two parties before the trade as been setup, this process its outside the scope for this project. They need to know each other and change at least your wallet address.
 
-When trades are created on the blockchain there are only 3 possible status for that trade. Created, Completed and Cancelled. Created status is the status after the first user creates the trade, then both of users could cancel the trade if one the or the other decides that no longer makes sense. When any cancels the trade that trade was deleted from the list of available trades. Completed status is when the second user (executer) executes the trade and accepts to trigger trade then we consider that trade is finished and no longer available on the list of trades.
+When trades are created on the blockchain there is only 3 possible status for that trade. Created, Completed, and Cancelled. Created status is the status after the first user creates the trade, then both users could cancel the trade if one or the other decides that it no longer makes sense. when one of the users cancels the transaction it is removed from the list of active transactions. Completed status is when the second user (executer) executes the trade and accepts to trigger trade then we consider that the trade is finished and no longer available on the list of trades.
 
 
 ![this screenshot](/assets/trade_status.png)
@@ -17,12 +17,18 @@ When trades are created on the blockchain there are only 3 possible status for t
 
 ### Start trade
 
-First the trade must be created by the first part (creator) where he fills the items we want to give and receive back once the trade is completed. As agreed with the other user. Before the transaction is accepted by the web3Bazaar contract the code will perform validations which verifies if all the parameters of the trade are valid. Contract check if all the web3 assets intended to be used in the exchange belong to the users involved in this exchange and if the user who are creating the trade gave the necessary permissions for web3bazaar contract to perform this asset exchange. The code detects if some issue occurs and throws an error code to the user. Check below all the errors on that error table.
+First, the trade must be created by the first part (creator) where he fills the items we want to give and receive back once the trade is completed. As agreed with the other user. Before the transaction is accepted by the web3Bazaar contract the code will perform validations which verifies if all the parameters of the trade are valid. Contract check if all the web3 assets intended to be used in the exchange belong to the users involved in this exchange and if the user who is creating the trade gave the necessary permissions for web3bazaar contract to perform this asset exchange. The code detects if some issue occurs and throws an error code to the user. 
+
+Internally contract stores the trade information status, assets user wallet address on the storage of the contract as shown on the below image.
+
+![Fig.1](/assets/trades-image.png)
+
+
 
 ### Execute trade
 
-When a trade are in created status executer user needs to execute that trade in order to swap the assets from on part to other. 
-
+When a trade are in created status executer user needs to execute that trade in order to swap the assets from on part to other. It is then verified that the executer user has given the contract permissions to move its assets to the other user, and an ownership check of all items is performed again. 
+If everthing is well verified by the contract then contract execute the swap between assets from one user to other and the trade is marked as Completed.
 
 
 blabla
