@@ -1,13 +1,24 @@
-# Web3 Bazaar contract
+# Web3 Bazaar 
 
 
-
-Web3 Bazaar its a escrow contract an escrow usually its an instrument whereby an asset or escrow money is held by a third party on behalf of two other parties that are in the process of completing a transaction. Web3Bazaar in that sense aren't held the assets on behalf of the parties, web3Bazaar its a non-custodial contract which means asset's pass from one part to other when the conditions of the trade are met.
+Web3 Bazaar its a escrow contract an escrow usually its an instrument whereby an asset or escrow money is held by a third party on behalf of two other parties that are in the process of completing a transaction. Web3Bazaar in that sense aren't held the assets on behalf of the parties, web3Bazaar its a non-custodial contract which means asset's pass from one part to other when the conditions are met.
 
 In Web3Bazaar the goal is move web3 assets ownership from two web3 users, one part wants to give a set of web3 assets(ERC20, ERC721, ERC1155) 
-and pretend to receives back other another set of web3 assets. The quantity and price estimation about the two swappble sets of itens needs to be agreed between two parties offchain.
+and pretend to receives back other set of web3 assets. The quantity and price estimation about the two swappble sets of itens needs to be agreed between two parties before the trade as been setup, this process its outside of the scope for this project.
+When trade as created on the blockchain there are only 3 possible status for that trade. Created, Completed and Cancelled. Created status is the status after the first user creates the trade, then both of users could cancelled the trade if one the or the other decides that no longer make sense. When any of the two cancels the trade that trade delete from the list of available trades. Completed status is when the second user (executer) executes the trade and accept to trigger trade.
 
-Once the trade had been created by the first part (creator) where he supply all the items we want to give and receive once the trade is completed
+![this screenshot](/assets/trade_status.png)
+
+
+
+
+## Steps for the trade 
+
+First trade must be created by the first part (creator) where he fills the items we wants to give and receive back once the trade is completed. As agreed with the other user. Before the transaction is accepted by the web3Bazaar contract the code will perform validation in order to confirm that all the paramertes of the trade are correct.
+
+
+
+
 
 blabla
 
