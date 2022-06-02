@@ -28,18 +28,12 @@ Internally contract stores the trade information status and assets the user's wa
 ### Execute trade
 
 When a trade are in created status executer user needs to execute that trade in order to swap the assets from on part to other. It is then verified that the executer user has given the contract permissions to move its assets to the other user, and an ownership check of all items is performed again. 
-If everthing is well verified by the contract then contract execute the swap between assets from one user to other and the trade is marked as Completed.
-
-
-blabla
-
-fig.1 (state)
-
-
-### Web3 Bazaar
+If everthing is verified by the contract then contract execute the swap between assets from one user to other and the trade is marked as Completed.
 
 ![Fig.1](/assets/trade_flow.png)
 
+
+### Web3 Bazaar
 
 
 
