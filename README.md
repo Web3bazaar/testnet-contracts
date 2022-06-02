@@ -17,6 +17,7 @@ A Trade in the Bazaar can only have 3 status:
 | Completed     | Counter-party executed the trade and assets swapped hands. The trade is now in a status that can't be accessed or trigerred anymore |
 | Cancelled      | One of both parties cancelled the trade and it can't be accessed or trigerred anymore |
 
+### Status flows
 
 ![this screenshot](/assets/trade_status.png)
 
@@ -28,12 +29,7 @@ A Trade in the Bazaar can only have 3 status:
 First, the trade must be submitted by the first counterpart (creator). Creator provides the trade terms and smart contract addresses of the assets both parties should commit to the trade. 
 It proceeeds to  perform validations to confirm if all the parameters of the trade are valid. Contract checks if all the assets belong to the wallet addresses provided and if the creator gave the necessary permissions for the Bazaar smart contract to perform this asset exchange. The code detects if some issue occurs and throws an error code to the user as describbed in the ERROR LIST at the end of this Readme. 
 
-The contract then internally stores all the trade terms and assets' data depicted below:
-
-![Fig.1](/assets/trades-image.png)
-
 ### Method Description
-
 
 | Parameter    | Input  |
 | ---          | ---        |
@@ -49,6 +45,9 @@ The contract then internally stores all the trade terms and assets' data depicte
 | executorTokenType[]      | "1" for native token, "2" for ERC-20, "3" for ERC-721 or "4" for ERC-1155|
 
 >Note: Once this method is called, the smart contract will return a unique `tradeId` value that will be used by the methods below in order to limit the operations to the designtaed parties and assets.
+
+The contract then internally stores all the trade terms and assets' data depicted below:
+![Fig.1](/assets/trades-image.png)
 
 ## 2.Execute trade
 
@@ -69,7 +68,7 @@ Upon succesful verification the contract executes the swap and changes the statu
 
 ## 3.getTrade
 
-Get Trade methods gives information about the trade based on the tradeId and user wallet it returns asset's stored for that trade.
+Get Trade methods gives information about the trade based on the `tradeId and user wallet it returns asset's stored for that trade.
 
 | Paramater name | Description  |
 | ---     |   ---        |
