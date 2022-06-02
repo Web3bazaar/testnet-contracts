@@ -5,6 +5,7 @@ Web3 Bazaar its a escrow contract an escrow usually its an instrument whereby an
 
 In Web3Bazaar the goal is move web3 assets ownership from two web3 users, one part wants to give a set of web3 assets(ERC20, ERC721, ERC1155) 
 and intends to receives back other set of web3 assets. The quantity and price estimation about the two swappble sets of itens needs to be agreed between two parties before the trade as been setup, this process its outside the scope for this project.
+
 When trades as created on the blockchain there are only 3 possible status for that trade. Created, Completed and Cancelled. Created status is the status after the first user creates the trade, then both of users could cancelled the trade if one the or the other decides that no longer make sense. When any cancels the trade that trade was deleted from the list of available trades. Completed status is when the second user (executer) executes the trade and accept to trigger trade then we consider that trade is finish and no longer available on the list of trades.
 
 ![this screenshot](/assets/trade_status.png)
