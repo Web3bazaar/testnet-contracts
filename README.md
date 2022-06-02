@@ -21,8 +21,7 @@ First the trade must be created by the first part (creator) where he fills the i
 
 ### Execute trade
 
-When an trade are available the other part ()
-
+When a trade are in created status executer user needs to execute that trade in order to swap the assets from on part to other. 
 
 
 
