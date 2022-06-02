@@ -38,12 +38,6 @@ If everthing is verified by the contract then contract execute the swap between 
 
 ## startTrade
 
-Start trade method needs to be called by the creator he sends the tokens we want to trade from his side it could be a list of assets of any type of asset's ERC20 ERC721 and ERC1155. Also send the list of asset's they want to get from the executer side also in a form of a list of tokens in any type. 
-
-Smart contract stores the information about that trade as the following picture describes
-
-- `startTrade` method
-
 Execute this method by providing the following parameters' data with the trade terms to open a trade in the contract:
 
 | Parameter    | Input  |
@@ -67,13 +61,21 @@ The executer needs to execute the trade to complete swap between the assets. Thi
 
 - `executeTrade` method
 
-Execute this method in behalf of both parties' wallets in order to deposit the assets in the contract:
+Execute this method in behalf of both parties wallets in order to deposit the assets in the contract
 
 | Parameter     | Input |
 | ---      | ---       |
 | tradeId  | Input value returned by `startTrade` method|
 
->Note: When role-playing as the counterparty you can call this method without providing a wallet address. 
+## getTrade
+
+Get Trade methods gives information about the trade based on the tradeId and user wallet it returns asset's stored for that trade.
+
+| Paramater name | Description  |
+| ---     |   ---        |
+| tradeId        |   tradeId            |
+| userWallet     |   user address       |
+
 
 
 ## Error List
@@ -85,9 +87,9 @@ Execute this method in behalf of both parties' wallets in order to deposit the a
 | EXECUTER_PARMS_LEN_ERROR    |   Error sending parameters for executer       |
 | ERR_NOT_OWN_ID_ERC721       |   User isn't the other ERC721 ID asset        |
 | ERR_NOT_ALLOW_TO_TRANSER_ITENS_ERC721     |  User did not give permission to spend ERC721 |
-| ERR_NOT_ENOUGH_FUNDS_ERC20        |   User has no funds on ERC20                          |
+| ERR_NOT_ENOUGH_FUNDS_ERC20        |   The user has not have enough ERC20                           |
 | ERR_NOT_ALLOW_SPEND_FUNDS         |   User did not give permission to spend ERC20         |
-| ERR_NOT_ENOUGH_FUNDS_ERC1155      |   User has no enough asset on ERC1155                 |
+| ERR_NOT_ENOUGH_FUNDS_ERC1155      |   The user has not have enough asset on ERC1155                  |
 | ERR_NOT_ALLOW_TO_TRANSER_ITENS_ERC1155     |   ser did not give permission to spend ERC1155        |
 
 
