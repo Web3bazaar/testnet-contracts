@@ -33,7 +33,7 @@ If everthing is verified by the contract then contract execute the swap between 
 ![Fig.1](/assets/trade_flow.png)
 
 
-### Method Descrption
+### Method Description
 
 
 ## startTrade
@@ -81,14 +81,14 @@ Execute this method in behalf of both parties' wallets in order to deposit the a
 
 | Code    | Description  |
 | ---     |   ---        |
-| CREATOR_PARMS_LEN_ERROR     |   BLABLA        |
-| EXECUTER_PARMS_LEN_ERROR     |   BLABLA        |
-| ERR_NOT_OWN_ID_ERC721     |   BLABLA        |
-| ERR_NOT_ALLOW_TO_TRANSER_ITENS_ERC721     |   BLABLA        |
-| ERR_NOT_ENOUGH_FUNDS_ERC20     |   BLABLA        |
-| ERR_NOT_ALLOW_SPEND_FUNDS     |   BLABLA        |
-| ERR_NOT_ENOUGH_FUNDS_ERC1155     |   BLABLA        |
-| ERR_NOT_ALLOW_TO_TRANSER_ITENS_ERC1155     |   BLABLA        |
+| CREATOR_PARMS_LEN_ERROR     |   Error sending parameters for creator        |
+| EXECUTER_PARMS_LEN_ERROR    |   Error sending parameters for executer       |
+| ERR_NOT_OWN_ID_ERC721       |   User isn't the other ERC721 ID asset        |
+| ERR_NOT_ALLOW_TO_TRANSER_ITENS_ERC721     |  User did not give permission to spend ERC721 |
+| ERR_NOT_ENOUGH_FUNDS_ERC20        |   User has no funds on ERC20                          |
+| ERR_NOT_ALLOW_SPEND_FUNDS         |   User did not give permission to spend ERC20         |
+| ERR_NOT_ENOUGH_FUNDS_ERC1155      |   User has no enough asset on ERC1155                 |
+| ERR_NOT_ALLOW_TO_TRANSER_ITENS_ERC1155     |   ser did not give permission to spend ERC1155        |
 
 
 
