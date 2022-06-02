@@ -4,7 +4,7 @@
 Web3 Bazaar its a escrow contract an escrow usually its an instrument whereby an asset or escrow money is held by a third party on behalf of two other parties that are in the process of completing a transaction. Web3Bazaar in that sense aren't held the assets on behalf of the parties, web3Bazaar its a non-custodial contract which means asset's pass from one part to other when the conditions are met.
 
 In Web3Bazaar the goal is move web3 assets ownership from two web3 users, one part wants to give a set of web3 assets(ERC20, ERC721, ERC1155) 
-and intends to receives back other set of web3 assets. The quantity and price estimation about the two swappble sets of itens needs to be agreed between two parties before the trade as been setup, this process its outside the scope for this project.
+and intends to receives back other set of web3 assets. The quantity and price estimation about the two "exchangebl"e sets of itens needs to be agreed between two parties before the trade as been setup, this process its outside the scope for this project. They need to know each other and change at least your wallet address.
 
 When trades are created on the blockchain there are only 3 possible status for that trade. Created, Completed and Cancelled. Created status is the status after the first user creates the trade, then both of users could cancel the trade if one the or the other decides that no longer makes sense. When any cancels the trade that trade was deleted from the list of available trades. Completed status is when the second user (executer) executes the trade and accepts to trigger trade then we consider that trade is finished and no longer available on the list of trades.
 
@@ -13,7 +13,7 @@ When trades are created on the blockchain there are only 3 possible status for t
 
 
 
-## Steps for the trade 
+## Steps to exchange assets
 
 ### Start trade
 
@@ -21,8 +21,7 @@ First the trade must be created by the first part (creator) where he fills the i
 
 ### Execute trade
 
-
-
+When an trade are available the other part ()
 
 
 
@@ -34,7 +33,7 @@ fig.1 (state)
 
 ### Web3 Bazaar
 
-![this screenshot](/assets/trade_flow.png)
+![Fig.1](/assets/trade_flow.png)
 
 
 
