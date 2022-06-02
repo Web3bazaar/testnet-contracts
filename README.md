@@ -19,7 +19,7 @@ When trades are created on the blockchain there is only 3 possible status for th
 
 First, the trade must be created by the first part (creator) where he fills the items we want to give and receive back once the trade is completed. As agreed with the other user. Before the transaction is accepted by the web3Bazaar contract the code will perform validations which verifies if all the parameters of the trade are valid. Contract check if all the web3 assets intended to be used in the exchange belong to the users involved in this exchange and if the user who is creating the trade gave the necessary permissions for web3bazaar contract to perform this asset exchange. The code detects if some issue occurs and throws an error code to the user. 
 
-Internally contract stores the trade information status, assets user wallet address on the storage of the contract as shown on the below image.
+Internally contract stores the trade information status and assets the user's wallet address on the storage of the contract as shown in the below image.
 
 ![Fig.1](/assets/trades-image.png)
 
