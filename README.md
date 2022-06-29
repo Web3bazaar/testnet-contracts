@@ -19,7 +19,7 @@ The Web3 Bazaar dApp is supported by non-custodial escrow contracts that enable 
 
 | Testnet    | Contract address |
 | ---          | ---        |
-| Mumbai | |
+| Mumbai | | [0x0a50b369f107aef88e83b79f8e437eb623ac4a0a](0x0a50b369f107aef88e83b79f8e437eb623ac4a0a)
 
 
 
