@@ -46,7 +46,6 @@ Go to one of the smart contracts below and connect your wallet on the `connect t
 | ERC-20      | Mumbai | [0x89A...6c41](https://mumbai.polygonscan.com/token/0x89A84dc58ABA7909818C471B2EbFBc94e6C96c41) | N/A |
 | ERC-20 V2   | Mumbai | [0xA2c...d60BA](https://mumbai.polygonscan.com/token/0xA2cCA397A605BD3164820D37f961c96A35fd60BA) | N/A | 
 | ERC-721     | Mumbai |[0x8ba..BD2B](https://mumbai.polygonscan.com/address/0x8ba96897cA8A95B39C639BEa1e5E9ce60d22BD2B#code) | [GO](https://testnets.opensea.io/collection/web3-bazaar-erc-721-test-collection) |
-| ERC-721 V2     | Mumbai |[0x51B..558B](https://mumbai.polygonscan.com/address/0x51B619dE76fc4FD32FE0571F8AD059d07f9f558B#code) | [GO](https://testnets.opensea.io/collection/web3-bazaar-erc-721-test-collection-v3) |
 | ERC-1155    | Mumbai | [0xc70...66f](https://mumbai.polygonscan.com/address/0xC70d6b33882dE18BDBD0a372B142aC96ceb1366f#code) | [GO](https://testnets.opensea.io/collection/web3-bazaar-erc-1155-test-collection-v3) |
 <br>
 
