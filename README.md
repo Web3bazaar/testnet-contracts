@@ -4,7 +4,7 @@
 
 This repo contains the solidity code used in the Bazaar smart contracts hosted on the compatible EVM testnets.
 
-## 📝 About the Smart contract
+## 📝 About the Smart contracts
 
 The Web3 Bazaar dApp is supported by non-custodial escrow contracts that enable peer-to-peer swaps of ERC-20, ERC-721 or ERC-1155 tokens. Contracts' only purpose is to switch asset ownership from one wallet address to another under the trades pre-established in it. 
 
@@ -23,9 +23,9 @@ The Web3 Bazaar dApp is supported by non-custodial escrow contracts that enable 
 
 
 
-## 👷 How to test the Web3 Bazaar in Mumbai testnet
+## 👷 How to test the Web3 Bazaar?
 
->Note: Make sure to connect your wallet to Mumbai test network. There won't be any costs associated with any transaction or fees you'll be paying interacting with the contracts below
+>Note: Make sure to connect your wallet to an available test network. There won't be any costs associated with any transaction or fees you'll be paying interacting with the contracts below
 
 ### 0- Fund your wallet with native tokens
 
